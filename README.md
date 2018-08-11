@@ -10,7 +10,7 @@
 * Modificar Tarefa
 * Editar Tarefa
 * Finalizar Tarefa.
-
+***
 ## Materias a ser usados: 
 * Api JDBC para conexão com banco de dados (MySql)
 * JavaFX para interface gráfica
