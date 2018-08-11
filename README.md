@@ -1,4 +1,6 @@
 # TriTarefas
+*  ![TriTarefas](https://github.com/Miguel0310/TriTarefas/blob/master/TriTarefas.md)
+
 
 ## Introdução
 **TriTarefas** é um Task Manager que permite organizar as tarefas que o usuario precise criar. Suas **Funcionalidades** sao:
@@ -10,5 +12,3 @@
 * JavaFX para interface gráfica
 * JUnit para realizar Testes Unitários
 
-## Caso de Uso de TriTarefas
-![tritarefas](https://user-images.githubusercontent.com/37191196/43933447-452fcb0a-9c39-11e8-911f-0af61cdf8035.png)
