@@ -3,7 +3,7 @@
 
 
 ## Introdução
-**TriTarefas** é um Task Manager que permite organizar as tarefas que o usuario precise criar. Suas **Funcionalidades** sao:
+**TriTarefas** é um Task Manager que permite organizar as tarefas que o usuário cria. Suas **Funcionalidades** sao:
 
 * Criar Tarefa (Precissa do login); Excluir Tarefa; Modificar Tarefa; Editar Tarefa; Finalizar Tarefa.
 
