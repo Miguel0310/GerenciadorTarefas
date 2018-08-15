@@ -3,16 +3,11 @@
 
 
 ## Introdução
-**TriTarefas** é um Task Manager que permite organizar as tarefas que o usuário cria. Suas **Funcionalidades** sao:
+**TriTarefas** é um Task Manager que permite organizar as tarefas que o usuário cria.
+![Documentacao](https://github.com/Miguel0310/TriTarefas.wiki.git) do projeto
 
-* Criar Tarefa (Precissa do login) 
-* Excluir Tarefa 
-* Modificar Tarefa
-* Editar Tarefa
-* Finalizar Tarefa.
 ***
 ## Materias a ser usados: 
 * Api JDBC para conexão com banco de dados (MySql)
 * JavaFX para interface gráfica
 * JUnit para realizar Testes Unitários
-
