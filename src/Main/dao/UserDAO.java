@@ -27,12 +27,13 @@ public class UserDAO extends BaseDAO{
                 //Obtem a conexao com o BD
                 Connection connection = getConnection();
                 // Prepara o comando SQL
-                PreparedStatement preparedStatement = connection.prepareStatement("insert into user(name,password) values(?,?)")
+                PreparedStatement preparedStatement = connection.prepareStatement("insert into user(User,Password,UserEmail) values(?,?,?)")
         ){
             // Substitiu o ? pela String
             preparedStatement.setString(1,user.getName());
             // Substitiu o segundo ? pela String
             preparedStatement.setString(2,user.getPassword());
+
             // Executa o comando SQL
             preparedStatement.execute();
 
