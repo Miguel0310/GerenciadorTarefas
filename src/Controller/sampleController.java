@@ -1,8 +1,6 @@
 package Controller;
 
 import Main.dao.ConnectionFactory;
-import Main.dao.UserDAO;
-import Main.entity.User;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -27,9 +25,8 @@ public class sampleController {
     public TextField txtUsuario;
     @FXML
     public PasswordField txtSenha;
-    User c = new User();
-    UserDAO ud = new UserDAO();
 
+    public static String idSessionUser;
 
     public void pressLogin(ActionEvent event) throws SQLException,IOException {
 
@@ -43,20 +40,20 @@ public class sampleController {
             String email = result.getString("UserEmail");
             String senha = result.getString("Password");
             if (((email.equals(txtUsuario.getText())) || usuarioID.equals(txtUsuario.getText())) && (senha.equals(txtSenha.getText()))){ //Compara o ID ou email do usuario e a senha.
+                idSessionUser = usuarioID;
                 Parent menu = FXMLLoader.load(getClass().getResource("Menu.fxml"));
                 Scene scene = new Scene(menu);
                 Stage inicioM = new Stage();
                 inicioM.setScene(scene);
                 inicioM.setTitle("Menu");
                 Image applicationIcon = new Image(getClass().getResourceAsStream("/img/icons8-overwolf-64.png"));
+                inicioM.setResizable(false);
                 inicioM.getIcons().add(applicationIcon);
                 inicioM.show();
                 break;
             }
             else{
-
             }
-
         }
         conn.close();
     }
@@ -70,6 +67,7 @@ public class sampleController {
         inicio.setTitle("Cadastro");
         Image applicationIcon = new Image(getClass().getResourceAsStream("/img/icons8-overwolf-64.png"));
         inicio.getIcons().add(applicationIcon);
+        inicio.setResizable(false);
         inicio.show();
 
     }

@@ -18,6 +18,7 @@ public class Main extends Application {
         primaryStage.setTitle("TriTarefas");
         Image applicationIcon = new Image(getClass().getResourceAsStream("/img/icons8-overwolf-64.png"));
         primaryStage.getIcons().add(applicationIcon);
+        primaryStage.setResizable(false);
         primaryStage.show();
 
     }

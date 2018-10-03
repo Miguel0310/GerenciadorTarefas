@@ -4,30 +4,59 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.sampleController">
-   <columnConstraints>
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-      <RowConstraints />
-   </rowConstraints>
+
+<AnchorPane prefHeight="500.0" prefWidth="550.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.sampleController">
    <children>
-      <AnchorPane prefHeight="500.0" prefWidth="550.0" GridPane.rowIndex="1">
-         <children>
-            <Label fx:id="lblUsuario" layoutX="159.0" layoutY="205.0" text="Usuario" />
-            <TextField fx:id="txtUsuario" layoutX="158.0" layoutY="226.0" prefHeight="31.0" prefWidth="235.0" promptText="ID" />
-            <PasswordField fx:id="txtSenha" layoutX="159.0" layoutY="302.0" prefHeight="31.0" prefWidth="235.0" text="12345678" />
-            <Label fx:id="lblSenha" layoutX="159.0" layoutY="281.0" text="Senha" />
-            <Button fx:id="btnLogin" layoutX="248.0" layoutY="368.0" mnemonicParsing="false" onAction="#pressLogin" text="Login" />
-            <Label layoutX="159.0" layoutY="449.0" text="Ainda nao possui uma conta?" />
-            <Button fx:id="btnCadastro" layoutX="363.0" layoutY="444.0" mnemonicParsing="false" onAction="#pressCadastrar" text="Cadastrar-se" />
-         </children>
-      </AnchorPane>
+      <Label fx:id="lblUsuario" layoutX="163.0" layoutY="189.0" text="Usuario">
+         <font>
+            <Font name="Microsoft YaHei UI Light" size="30.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#e80983" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <TextField fx:id="txtUsuario" layoutX="158.0" layoutY="226.0" prefHeight="31.0" prefWidth="235.0" promptText="ID" />
+      <PasswordField fx:id="txtSenha" layoutX="159.0" layoutY="302.0" prefHeight="31.0" prefWidth="235.0" text="12345678" />
+      <Label fx:id="lblSenha" layoutX="159.0" layoutY="265.0" text="Senha">
+         <font>
+            <Font name="Microsoft YaHei Light" size="25.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.08737864077669903">
+               <stops>
+                  <Stop color="#e80983" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Button fx:id="btnLogin" layoutX="248.0" layoutY="368.0" mnemonicParsing="false" onAction="#pressLogin" text="Login" />
+      <Label layoutX="27.0" layoutY="417.0" text="Ainda nao possui uma conta?" textFill="#ff2185fc" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="Microsoft YaHei Light" size="25.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Label>
+      <Button fx:id="btnCadastro" layoutX="375.0" layoutY="419.0" mnemonicParsing="false" onAction="#pressCadastrar" text="Cadastrar-se" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="191.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/zorro-Portada.png" />
+         </image>
+      </ImageView>
    </children>
-</GridPane>
+</AnchorPane>
