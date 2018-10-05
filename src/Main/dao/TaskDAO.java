@@ -1,10 +1,12 @@
 package Main.dao;
 
+import Controller.sampleController;
 import Main.entity.Task;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,11 +14,36 @@ import static Main.dao.ConnectionFactory.getConnection;
 
 public class TaskDAO {
 
+
     public void inserir(String Titulo, String tarefa) {
+
+        try(Connection conn = getConnection();
+            PreparedStatement preparedStatement = conn.prepareStatement("INSERT INTO tarefas(UserID,Nome,Tarefa) values(?,?,?)")){
+
+            String usuario = sampleController.idSessionUser;
+            preparedStatement.setString(1,usuario);
+            preparedStatement.setString(2,Titulo); //Titulo da tarefa (coluna nome)
+            preparedStatement.setString(3,tarefa); //Corpo da tarefa (coluna tarefa)
+
+            preparedStatement.execute();
+
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
+
 
     }
 
     public void deletar(String nome) {
+        try (Connection conn = getConnection();
+             PreparedStatement preparedStatement = conn.prepareStatement("DELETE FROM tarefas where nome = ?")) {
+
+            preparedStatement.setString(1,nome);
+            preparedStatement.execute();
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
@@ -29,7 +56,7 @@ public class TaskDAO {
                 //Obtem a conexao com o BD
                 Connection connection = getConnection();
                 // Prepara o comando SQL
-                PreparedStatement preparedStatement = connection.prepareStatement("select * from tarefas where userid = ?")
+                PreparedStatement preparedStatement = connection.prepareStatement("select UserID from tarefas where userid = ?")
         ){
             // Substitiu o ? pela String
             preparedStatement.setInt(1, id);

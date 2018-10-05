@@ -1,6 +1,7 @@
 package Main.dao;
 
 import Main.entity.User;
+import jdk.internal.dynalink.beans.StaticClass;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -81,7 +82,7 @@ public class UserDAO extends BaseDAO{
         //Obtem a conexao com o BD
         try(
                 Connection connection = getConnection();
-                PreparedStatement statement = connection.prepareStatement("select user_id,name,password from user where user_id = ?")
+                PreparedStatement statement = connection.prepareStatement("select UserID from users where UserID = ?")
         ){
             // Informa o user_id na query
             statement.setLong(1,id);
@@ -96,8 +97,8 @@ public class UserDAO extends BaseDAO{
 
                 // Obtem os valores dos campos, deve ser na mesma ordem informada na query
                 user.setId(resultSet.getLong(1));
-                user.setName(resultSet.getString(2));
-                user.setPassword(resultSet.getString(3));
+                /*user.setName(resultSet.getString(2));
+                user.setPassword(resultSet.getString(3));*/
             }
 
         }catch (Exception e){

@@ -41,6 +41,7 @@ public class sampleController {
             String senha = result.getString("Password");
             if (((email.equals(txtUsuario.getText())) || usuarioID.equals(txtUsuario.getText())) && (senha.equals(txtSenha.getText()))){ //Compara o ID ou email do usuario e a senha.
                 idSessionUser = usuarioID;
+
                 Parent menu = FXMLLoader.load(getClass().getResource("Menu.fxml"));
                 Scene scene = new Scene(menu);
                 Stage inicioM = new Stage();

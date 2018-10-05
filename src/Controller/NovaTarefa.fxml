@@ -11,7 +11,6 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.NovaTarefaController">
    <children>
       <Label fx:id="lblnewTaskTitle" layoutX="212.0" layoutY="26.0" text="Nova Tarefa">
@@ -45,7 +44,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="146.0" layoutY="119.0" prefHeight="31.0" prefWidth="416.0" promptText="Titulo" />
+      <TextField fx:id="txtTitulo" layoutX="146.0" layoutY="119.0" prefHeight="31.0" prefWidth="416.0" promptText="Titulo" />
       <Label fx:id="lblAreaTask" layoutX="27.0" layoutY="187.0" text="Nova Tarefa">
          <textFill>
             <LinearGradient endX="1.0" endY="1.0">
@@ -60,7 +59,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <TextArea layoutX="146.0" layoutY="178.0" prefHeight="200.0" prefWidth="416.0" />
+      <TextArea fx:id="txtArea" layoutX="146.0" layoutY="178.0" prefHeight="200.0" prefWidth="416.0" />
       <Button fx:id="btnCancelar" layoutX="48.0" layoutY="397.0" mnemonicParsing="false" onAction="#pressCancelar" text="Cancelar" />
       <Button fx:id="btnCriar" layoutX="511.0" layoutY="397.0" mnemonicParsing="false" onAction="#pressCriar" text="Criar" />
    </children>
