@@ -4,7 +4,7 @@
 
 ## Introdução
 **TriTarefas** é um Task Manager que permite organizar as tarefas que o usuário cria.
-![Documentacao](https://github.com/Miguel0310/TriTarefas.wiki.git) do projeto
+![Documentacao](https://github.com/Miguel0310/TriTarefas/wiki/Documentacao-de-TriTarefas) do projeto
 
 ***
 ## Materias a ser usados: 
