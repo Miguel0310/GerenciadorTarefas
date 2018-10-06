@@ -1,5 +1,5 @@
 # TriTarefas
-*  ![TriTarefas](/TriTarefas.md)
+*  [TriTarefas](/TriTarefas.md)
 
 
 ## Introdução
