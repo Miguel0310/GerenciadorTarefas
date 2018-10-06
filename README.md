@@ -1,5 +1,5 @@
 # TriTarefas
-*  ![TriTarefas](https://github.com/Miguel0310/TriTarefas/blob/master/TriTarefas.md)
+*  ![TriTarefas](/TriTarefas.md)
 
 
 ## Introdução
